@@ -1,7 +1,8 @@
 import Logo from '../../assets/shared/logo.svg';
 import { createStore } from "solid-js/store";
-import {routes} from "./routes";
-import {For} from "solid-js";
+import { routes } from "./routes";
+import { For } from "solid-js";
+import "./Navbar.css";
 
 export function Navbar() {
     const [navRoutes, setNavRoutes] = createStore(routes);
@@ -12,10 +13,15 @@ export function Navbar() {
                 <img class="p-12" src={Logo} alt="logo" />
             </section>
             <div id="line" class="w-[33%] h-0.5 opacity-70 bg-gray-600"></div>
-            <div class="w-1/2 flex justify-center items-center gap-12">
+            <div id="navElements" class="w-1/2 bg-[#979797] h-[5rem] flex justify-center gap-12">
                <For each={navRoutes}>
                    {(route) => (
-                       <a href={route.href}>{route.name}</a>
+                       <a
+                           href={route.href}
+                           class="font1 flex items-center text-lg text-white h-[5rem] border-white hover:border-b-2"
+                       >
+                           {route.name}
+                       </a>
                    )}
                </For>
             </div>
