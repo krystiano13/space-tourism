@@ -1,8 +1,9 @@
+import './App.css';
 function App() {
     return (
         <div
             class="bg-home-moon bg-cover bg-no-repeat w-[100vw] h-[100vh] flex
-            justify-around items-end p-24 pb-36">
+            justify-around items-end p-28 overflow-hidden">
             <section class="max-w-[50%] flex flex-col gap-1">
                 <h3 class="font1 text-2xl text-[#D0D6F9]">SO, YOU WANT TO TRAVEL TO</h3>
                 <h1 class="font2 text-[9rem] text-white">SPACE</h1>
@@ -12,9 +13,11 @@ function App() {
                     world experience!
                 </p>
             </section>
-            <button>
+          <section class="max-w-[50%] flex justify-center min-h-64 items-center">
+            <button id="explore" class="font2 bg-white w-64 h-64 rounded-full text-4xl">
               EXPLORE
             </button>
+          </section>
         </div>
     );
 }

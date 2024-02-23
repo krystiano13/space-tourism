@@ -9,10 +9,3 @@
 .font2 {
     font-family: 'Bellefair', sans-serif;
 }
-
-.bg-home-moon {
-    background-image: url("./assets/home/background-home-desktop.jpg");
-}
-.m-bg-home-moon {
-    background-image: url("./assets/home/background-home-mobile.jpg");
-}
