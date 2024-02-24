@@ -10,15 +10,15 @@ export function Navbar() {
     return (
         <nav class="fixed w-full flex items-center">
             <section class="flex w-[17%] items-center justify-center w">
-                <img class="p-12" src={Logo} alt="logo" />
+                <img class="p-12 scale-125" src={Logo} alt="logo" />
             </section>
-            <div id="line" class="w-[33%] h-0.5 opacity-70 bg-gray-600"></div>
+            <div id="line" class="w-[33%] translate-x-6 z-50 h-0.5 opacity-70 bg-gray-600"></div>
             <div id="navElements" class="w-1/2 bg-[#979797] h-[5rem] flex justify-center gap-12">
                <For each={navRoutes}>
                    {(route) => (
                        <a
                            href={route.href}
-                           class="font1 flex items-center text-lg text-white h-[5rem] border-white hover:border-b-2"
+                           class="font1 flex items-center text-base text-white h-[5rem] border-white hover:border-b-2"
                        >
                            {route.name}
                        </a>
