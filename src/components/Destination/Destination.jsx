@@ -1,5 +1,4 @@
 import './Destination.css';
-import Moon from '../../assets/destination/image-moon.webp'
 import {createSignal} from "solid-js";
 import { planets } from "./planets";
 
@@ -11,7 +10,7 @@ export default function Destination() {
         >
             <h1 class="font1 mt-24 font-light text-4xl text-white">PICK YOUR DESTINATION</h1>
             <div class="flex justify-between items-center w-full pl-12 pr-12 xl:pl-24 xl:pr-24">
-                <img class="mt-12" src={planets[planet()].img} alt="moon"/>
+                <img class="mt-12 entry" src={planets[planet()].img} alt="moon"/>
                 <section class="w-[40%] flex flex-col gap-12">
                     <div id="planets" class="flex gap-7">
                         <For each={planets}>
@@ -24,12 +23,12 @@ export default function Destination() {
                             }
                         </For>
                     </div>
-                    <h2 class="font2 text-white text-8xl">{planets[planet()].name}</h2>
-                    <p class="font1 font-light text-justify text-[#D0D6F9] 2xl:max-w-[90%] text-xl">
+                    <h2 class="font2 entry2 text-white text-8xl">{planets[planet()].name}</h2>
+                    <p class="font1 entry2 font-light text-justify text-[#D0D6F9] 2xl:max-w-[90%] text-xl 2xl:text-[1.35rem]">
                         { planets[planet()].desc }
                     </p>
-                    <div id="line" class="h-0.5 opacity-70 bg-gray-600 2xl:max-w-[90%] w-full"></div>
-                    <section class="2xl:max-w-[90%] w-full flex justify-start gap-16">
+                    <div id="line" class="h-0.5 entry2 opacity-70 bg-gray-600 2xl:max-w-[90%] w-full"></div>
+                    <section class="2xl:max-w-[90%] entry2 w-full flex justify-start gap-16">
                         <div class="flex flex-col gap-2">
                             <h4 class="text-[#D0D6F9] font-light font1 text-lg">AVG. DISTANCE</h4>
                             <p class="text-white font2 text-3xl">{ planets[planet()].distance }</p>
