@@ -14,10 +14,15 @@ export default function Destination() {
                 <img class="mt-12" src={planets[planet()].img} alt="moon"/>
                 <section class="w-[40%] flex flex-col gap-12">
                     <div id="planets" class="flex gap-7">
-                        <button onClick={() => setPlanet(0)} class="font1 text-[#D0D6F9] text-lg">MOON</button>
-                        <button onClick={() => setPlanet(1)} class="font1 text-[#D0D6F9] text-lg">MARS</button>
-                        <button onClick={() => setPlanet(2)} class="font1 text-[#D0D6F9] text-lg">EUROPA</button>
-                        <button onClick={() => setPlanet(3)} class="font1 text-[#D0D6F9] text-lg">TITAN</button>
+                        <For each={planets}>
+                            {
+                                (item) => (
+                                    <button onClick={() => setPlanet(item.id)}
+                                            class={`font1 text-[#D0D6F9] text-lg ${item.id === planet() && "border-b-2 border-white"}`}>{item.name}
+                                    </button>
+                                )
+                            }
+                        </For>
                     </div>
                     <h2 class="font2 text-white text-8xl">{planets[planet()].name}</h2>
                     <p class="font1 font-light text-justify text-[#D0D6F9] 2xl:max-w-[90%] text-xl">
