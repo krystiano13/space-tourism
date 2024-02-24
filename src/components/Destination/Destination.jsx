@@ -1,7 +1,9 @@
 import './Destination.css';
 import Moon from '../../assets/destination/image-moon.webp'
+import {createSignal} from "solid-js";
 
 export default function Destination() {
+    const [planet, setPlanet] = createSignal("MOON");
     return (
         <div
             class="flex flex-col justify-center bg-dest-moon bg-cover bg-no-repeat w-[100vw] h-[100vh] p-32 overflow-hidden"
