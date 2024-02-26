@@ -3,6 +3,10 @@ import mars from '../../assets/destination/image-mars.webp';
 import europa from '../../assets/destination/image-europa.webp';
 import titan from '../../assets/destination/image-titan.webp';
 
+/**
+ *
+ * @type {[{img: {}, distance: string, name: string, id: number, travel: string, desc: string},{img: {}, distance: string, name: string, id: number, travel: string, desc: string},{img: {}, distance: string, name: string, id: number, travel: string, desc: string},{img: {}, distance: string, name: string, id: number, travel: string, desc: string}]}
+ */
 export const planets = [
     {
         id: 0,
