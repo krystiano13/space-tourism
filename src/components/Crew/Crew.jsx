@@ -1,22 +1,20 @@
 import './Crew.css';
-import douglas from '../../assets/crew/image-douglas-hurley.webp';
+import {members} from "./members";
 import {createSignal} from "solid-js";
 
 export default function Crew() {
     const [member, setMember] = createSignal(0);
     return (
         <div
-            class="flex flex-col justify-center bg-dest-moon bg-cover bg-no-repeat w-[100vw] h-[100vh] p-24 pb-0 overflow-hidden"
+            class="flex flex-col justify-end bg-dest-moon bg-cover bg-no-repeat w-[100vw] h-[100vh] p-24 pb-0 overflow-hidden"
         >
-            <h1 class="font1 mt-24 font-light text-4xl text-white">MEET YOUR CREW</h1>
-            <div class="flex justify-between items-center w-full">
-                <section id="description" class="w-[40%] flex flex-col gap-8 mt-12 pb-24">
-                    <h2 class="font2 entry2 text-white text-4xl">COMMANDER</h2>
-                    <h2 class="font2 entry2 text-white text-6xl">DOUGLAS HURLEY</h2>
-                    <p class="font1 entry2 font-light text-justify text-[#D0D6F9] 2xl:max-w-[90%] text-xl 2xl:text-[1.35rem]">
-                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA
-                        astronaut.
-                        He launched into space for the third time as commander of Crew Dragon Demo-2.
+            <h1 class="entry2 font1 mt-36 font-light xl:text-3xl 2xl:text-4xl text-white">MEET YOUR CREW</h1>
+            <div class="flex justify-between items-center w-full h-4/5">
+                <section id="description" class="w-[40%] flex flex-col gap-8 mt-12 pb-32">
+                    <h2 class="font2 entry2 text-white xl:text-3xl 2xl:text-4xl">{members[member()].role}</h2>
+                    <h2 class="font2 entry2 text-white xl:text-5xl 2xl:text-6xl">{members[member()].name}</h2>
+                    <p class="font1 entry2 font-light text-justify text-[#D0D6F9] 2xl:max-w-[90%] 2xl:text-[1.35rem] xl:text-xl">
+                        {members[member()].desc}
                     </p>
                     <div id="dots" class="flex gap-4 mt-16 entry2">
                         <button
@@ -38,7 +36,7 @@ export default function Crew() {
                     </div>
                 </section>
                 <section class="h-full flex items-end entry">
-                    <img class="h-full" src={douglas} alt="Douglas Hurley Photo"/>
+                    <img class="h-full" src={members[member()].img} alt={`${members[member()].name} Photo`}/>
                 </section>
             </div>
         </div>

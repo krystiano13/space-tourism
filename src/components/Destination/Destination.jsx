@@ -8,7 +8,7 @@ export default function Destination() {
         <div
             class="flex flex-col justify-center bg-dest-moon bg-cover bg-no-repeat w-[100vw] h-[100vh] p-32 overflow-hidden"
         >
-            <h1 class="font1 mt-24 font-light text-4xl text-white">PICK YOUR DESTINATION</h1>
+            <h1 class="font1 entry mt-24 font-light text-4xl text-white">PICK YOUR DESTINATION</h1>
             <div class="flex justify-between items-center w-full pl-12 pr-12 xl:pl-24 xl:pr-24">
                 <img class="mt-12 entry" src={planets[planet()].img} alt="moon"/>
                 <section class="w-[40%] flex flex-col gap-12">
