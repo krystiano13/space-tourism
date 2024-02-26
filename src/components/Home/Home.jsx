@@ -14,9 +14,13 @@ function Home() {
                 </p>
             </section>
             <section class="max-w-[50%] entry2 flex justify-center min-h-64 items-center">
-                <button id="explore" class="font2 bg-white w-64 h-64 rounded-full text-4xl">
+                <a
+                    href="/destination"
+                    id="explore"
+                    class="font2 flex justify-center items-center bg-white w-64 h-64 rounded-full text-4xl"
+                >
                     EXPLORE
-                </button>
+                </a>
             </section>
         </div>
     );
