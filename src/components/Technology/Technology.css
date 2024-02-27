@@ -1,3 +1,7 @@
 .bg-dest-moon {
     background-image: url("../../assets/destination/background-destination-desktop.jpg");
 }
+
+.text-black {
+    color: black;
+}
