@@ -8,11 +8,11 @@ export default function Technology() {
         <div
             class="flex flex-col justify-end bg-dest-moon bg-cover bg-no-repeat w-[100vw] h-[100vh] p-24 pr-0 overflow-hidden"
         >
-            <h1 class="entry2 font1 mt-36 font-light xl:text-3xl 2xl:text-4xl text-white">
+            <h1 class="entry font1 mt-36 font-light xl:text-3xl 2xl:text-4xl text-white">
                 SPACE LAUNCH 101
             </h1>
             <div class="flex justify-between items-center w-full h-4/5">
-                <section class="w-[60%] flex gap-24 h-3/5">
+                <section class="w-[60%] flex gap-24 h-3/5 entry">
                     <div class="flex flex-col justify-between items-center gap-6 h-full">
                         <button onClick={() => setId(0)} class={`${id() === 0 && "bg-white text-black"} text-white transition rounded-full lg:w-16 2xl:w-24 lg:h-16 2xl:h-24 text-3xl font2 border-[2px] border-gray-400 hover:border-white`}>1</button>
                         <button onClick={() => setId(1)} class={`${id() === 1 && "bg-white text-black"} text-white transition rounded-full lg:w-16 2xl:w-24 lg:h-16 2xl:h-24 text-3xl font2 border-[2px] border-gray-400 hover:border-white`}>2</button>
@@ -26,7 +26,7 @@ export default function Technology() {
                         </p>
                     </section>
                 </section>
-                <section class="w-[40%] flex justify-end">
+                <section class="w-[40%] flex justify-end entry2">
                     <img class="w-4/5" src={info[id()].img} alt={info[id()].alt}/>
                 </section>
             </div>
