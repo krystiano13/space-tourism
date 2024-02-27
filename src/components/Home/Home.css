@@ -1,8 +1,11 @@
 .bg-home-moon {
-    background-image: url("../../assets/home/background-home-desktop.jpg");
-}
-.m-bg-home-moon {
-    background-image: url("../../assets/home/background-home-mobile.jpg");
+    @media screen and (min-width: 1024px) {
+        background-image: url("../../assets/home/background-home-desktop.jpg");
+    }
+
+    @media screen and (max-width : 1024px) {
+        background-image: url("../../assets/home/background-home-mobile.jpg");
+    }
 }
 
 #explore {
