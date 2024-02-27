@@ -11,9 +11,9 @@ export default function Crew() {
             <h1 class="entry2 font1 mt-36 font-light xl:text-3xl 2xl:text-4xl text-white">MEET YOUR CREW</h1>
             <div class="flex justify-between items-center w-full h-4/5">
                 <section id="description" class="w-[40%] flex flex-col gap-8 mt-12 pb-32">
-                    <h2 class="font2 entry2 text-white xl:text-3xl 2xl:text-4xl">{members[member()].role}</h2>
+                    <h2 class="font2 entry2 text-gray-500 xl:text-2xl 2xl:text-3xl">{members[member()].role}</h2>
                     <h2 class="font2 entry2 text-white xl:text-5xl 2xl:text-6xl">{members[member()].name}</h2>
-                    <p class="font1 entry2 font-light text-justify text-[#D0D6F9] 2xl:max-w-[90%] 2xl:text-[1.35rem] xl:text-xl">
+                    <p class="font1 entry2 font-light text-justify text-[#D0D6F9] 2xl:max-w-[80%] 2xl:text-[1.35rem] xl:text-xl">
                         {members[member()].desc}
                     </p>
                     <div id="dots" class="flex gap-4 mt-16 entry2">
@@ -35,7 +35,7 @@ export default function Crew() {
                         </button>
                     </div>
                 </section>
-                <section class="h-full flex items-end entry">
+                <section class="h-full flex entry">
                     <img class="h-full" src={members[member()].img} alt={`${members[member()].name} Photo`}/>
                 </section>
             </div>
