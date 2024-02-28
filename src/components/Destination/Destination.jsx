@@ -1,5 +1,5 @@
 import './Destination.css';
-import {createSignal} from "solid-js";
+import { createSignal } from "solid-js";
 import { planets } from "./planets";
 
 export default function Destination() {
