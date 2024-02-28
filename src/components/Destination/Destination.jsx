@@ -8,7 +8,7 @@ export default function Destination() {
         <div
             class="flex flex-col justify-center bg-dest-moon bg-cover bg-no-repeat w-[100vw] h-[100vh] pl-1 pr-1 p-4 md:p-16 lg:p-32 overflow-hidden"
         >
-            <h1 class="font1 entry mt-24 font-light xl:text-3xl 2xl:text-4xl text-white text-center lg:text-left">PICK YOUR DESTINATION</h1>
+            <h1 class="font1 entry mt-24 font-light text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-white text-center lg:text-left">PICK YOUR DESTINATION</h1>
             <div class="flex flex-col lg:flex-row justify-between gap-3 md:gap-6 xl:gap-0 items-center w-full pl-12 pr-12 xl:pl-24 xl:pr-24">
                 <img class="mt-12 entry w-[35%] md:w-[50%] lg:w-[35%]" src={planets[planet()].img} alt="moon"/>
                 <section class="w-full lg:w-[40%] flex flex-col gap-6 xl:gap-8 2xl:gap-12">
@@ -30,12 +30,12 @@ export default function Destination() {
                     <div id="line" class="h-0.5 entry2 opacity-70 bg-gray-600 2xl:max-w-[90%] w-full"></div>
                     <section class="2xl:max-w-[90%] entry2 w-full flex justify-start gap-16">
                         <div class="flex flex-col gap-2">
-                            <h4 class="text-[#D0D6F9] font-light font1 xl:text-xs 2xl:text-lg">AVG. DISTANCE</h4>
-                            <p class="text-white font2 xl:text-xl 2xl:text-3xl">{ planets[planet()].distance }</p>
+                            <h4 class="text-[#D0D6F9] font-light font1 text-xs sm:text-base xl:text-xs 2xl:text-lg">AVG. DISTANCE</h4>
+                            <p class="text-white font2 text-xs sm:text-base xl:text-xl 2xl:text-3xl">{ planets[planet()].distance }</p>
                         </div>
                         <div class="flex flex-col gap-2">
-                            <h4 class="text-[#D0D6F9] font-light font1 xl:text-xs 2xl:text-lg">EST. TRAVEL TIME</h4>
-                            <p class="text-white font2 xl:text-xl 2xl:text-3xl">{planets[planet()].travel}</p>
+                            <h4 class="text-[#D0D6F9] font-light font1 text-xs sm:text-base xl:text-xs 2xl:text-lg">EST. TRAVEL TIME</h4>
+                            <p class="text-white font2 text-xs sm:text-base xl:text-xl 2xl:text-3xl">{planets[planet()].travel}</p>
                         </div>
                     </section>
                 </section>
