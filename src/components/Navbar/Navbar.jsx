@@ -1,11 +1,13 @@
 import Logo from '../../assets/shared/logo.svg';
-import { createStore } from "solid-js/store";
+import { createStore, } from "solid-js/store";
+import { createSignal } from "solid-js";
 import { routes } from "./routes";
 import { For } from "solid-js";
 import "./Navbar.css";
 
 export function Navbar() {
     const [navRoutes, setNavRoutes] = createStore(routes);
+    const [isMenuOpen, setIsMenuOpen] = createSignal(false);
 
     return (
         <nav class="fixed w-full flex justify-between md:justify-start items-center p-12">
@@ -26,11 +28,13 @@ export function Navbar() {
                </For>
             </div>
             <div id="hamburgerButton"
-                 class="cursor-pointer flex flex-col justify-around items-center w-12 h-12 md:hidden"
+                 class="cursor-pointer rounded-full flex flex-col p-3 justify-around transition-colors items-center w-14 h-14 md:hidden"
+                 classList={{ "bg-white": isMenuOpen() }}
+                 onClick={() => setIsMenuOpen(prev => !prev)}
             >
-                <div id="btnLine" class="w-full h-1 bg-white"></div>
-                <div id="btnLine" class="w-full h-1 bg-white"></div>
-                <div id="btnLine" class="w-full h-1 bg-white"></div>
+                <div id="btnLine" class="w-full h-1 bg-white transition-colors" classList={{ "bg-black": isMenuOpen() }}></div>
+                <div id="btnLine" class="w-full h-1 bg-white transition-colors" classList={{ "bg-black": isMenuOpen() }}></div>
+                <div id="btnLine" class="w-full h-1 bg-white transition-colors" classList={{ "bg-black": isMenuOpen() }}></div>
             </div>
         </nav>
     )
