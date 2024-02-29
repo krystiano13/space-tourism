@@ -5,3 +5,10 @@
 .text-black {
     color: black;
 }
+
+#text {
+    @media screen and (max-height: 700px) and (orientation: portrait) {
+        line-height: 1rem;
+        font-size: 0.75rem;
+    }
+}
